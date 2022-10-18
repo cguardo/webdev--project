@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
     */
     $('.registration-form fieldset:first-child').fadeIn('slow');
     
-    $('.registration-form input[type="text"], .registration-form input[type="password"], .registration-form year .registration-form program').on('focus', function() {
+    $('.registration-form input[type="text"], .registration-form input[type="password"], .registration-form select [name="yearLevel"] .registration-form program').on('focus', function() {
     	$(this).removeClass('input-error');
     });
     
@@ -26,11 +26,14 @@ jQuery(document).ready(function() {
     $('.registration-form .btn-next').on('click', function() {
     	var parent_fieldset = $(this).parents('fieldset');
     	var next_step = true;
+
+	
     	
-    	parent_fieldset.find('input[type="text"], input[type="password"], year, program').each(function() {
+    	parent_fieldset.find('input[type="text"], input[type="password"], select').each(function(key, value) {
     		if( $(this).val() == "" ) {
     			$(this).addClass('input-error');
     			next_step = false;
+				
     		}
     		else {
     			$(this).removeClass('input-error');
