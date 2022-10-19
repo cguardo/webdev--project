@@ -2,6 +2,10 @@
 input[type="text"], 
 input[type="password"], 
 input[type="totext"],
+input[type="studnum"],
+input[type="email"],
+input[type="contact"],
+input[type="ueemail"],
 select, 
 textarea.form-control {
 	height: 50px;
@@ -30,6 +34,10 @@ select.form-control {
 input[type="text"]:focus, 
 input[type="password"]:focus, 
 input[type="totext"]:focus,
+input[type="studnum"]:focus,
+input[type="email"]:focus,
+input[type="contact"]:focus,
+input[type="ueemail"]:focus,
 select:focus, 
 textarea.form-control:focus {
 	outline: 0;
@@ -39,16 +47,16 @@ textarea.form-control:focus {
 }
 
 input[type="text"]:-moz-placeholder, input[type="totext"]:-moz-placeholder, input[type="password"]:-moz-placeholder,
-input[type="studnum"]:-moz-placeholder,
-textarea:-moz-placeholder, textarea.form-control:-moz-placeholder { color: #888; }
+input[type="studnum"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="contact"]:-moz-placeholder,
+input[type="ueemail"]:-moz-placeholder, textarea:-moz-placeholder, textarea.form-control:-moz-placeholder { color: #888; }
 
 input[type="text"]:-ms-input-placeholder, input[type="totext"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder,
-input[type="studnum"]:-ms-input-placeholder,
-textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder { color: #888; }
+input[type="studnum"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="contact"]:-ms-input-placeholder,
+input[type="ueemail"]:-ms-input-placeholder, textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder { color: #888; }
 
 input[type="text"]::-webkit-input-placeholder, input[type="totext"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, 
-input[type="studnum"]::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder { color: #888; }
+input[type="studnum"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="contact"]::-webkit-input-placeholder,
+input[type="ueemail"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder { color: #888; }
 
 
 

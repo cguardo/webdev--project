@@ -66,6 +66,7 @@
                         	
                         	<form role="form" action="" method="post" class="registration-form">
                         		
+								<!-- PERSONAL INFO (DONE WITH VALIDATION) -->
                         		<fieldset>
 		                        	<div class="form-top">
 		                        		<div class="form-top-left">
@@ -97,7 +98,7 @@
 										<div class="form-group">
 											<p>Student Number <span class="required">*</span></p>
 											<label class="sr-only" for="form-student-number">Student Number</label>
-											<input type="text" name="form-student-number" placeholder="11 digits..." class="form-student-number form-control" id="form-student-number">
+											<input type="studnum" name="form-student-number" placeholder="11 digits..." class="form-student-number form-control" id="form-student-number">
 										</div>
 
 										<div class="form-group">
@@ -121,15 +122,13 @@
 												<option value="ME">Mechanical Engineering</option>
 											</select>										
 										</div>
-				                        <!-- <div class="form-group">
-				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
-				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
-				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-				                        </div> -->
+				                        
 				                        <button type="button" class="btn btn-next">Next</button>
 				                    </div>
 			                    </fieldset>
 			                    
+
+								<!-- CONTACTS -->
 			                    <fieldset>
 		                        	<div class="form-top">
 		                        		<div class="form-top-left">
@@ -143,44 +142,30 @@
 		                            <div class="form-bottom">
 				                        <div class="form-group">
 											<p>Ue Email <span class="required">*</span></p>
-				                        	<label class="sr-only" for="form-email">Ue Email</label>
-				                        	<input type="text" name="form-email" placeholder="example@ue.edu.ph" class="form-email form-control" id="form-email">
+				                        	<label class="sr-only" for="form-ueemail">Ue Email</label>
+				                        	<input type="ueemail" name="form-ueemail" placeholder="example@ue.edu.ph" class="form-email form-control" id="form-ueemail">
 				                        </div>
 										<div class="form-group">
 											<p>Personal Email <span class="required">*</span></p>
 				                        	<label class="sr-only" for="form_Personalemail">Personal Email</label>
-				                        	<input type="text" name="form_Personalemail" placeholder="example@gmail.com" class="form_Personalemail form-control" id="form_Personalemail">
+				                        	<input type="email" name="form_Personalemail" placeholder="example@gmail.com" class="form_Personalemail form-control" id="form_Personalemail">
 				                        </div>
-										<!-- 
-				                        <div class="form-group">
-				                    		<label class="sr-only" for="form-password">Password</label>
-				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-repeat-password">Repeat password</label>
-				                        	<input type="password" name="form-repeat-password" placeholder="Repeat password..." 
-				                        				class="form-repeat-password form-control" id="form-repeat-password">
-				                        </div>-->
+									
 										<div class="form-group">
 											<p>Contact Number <span class="required">*</span></p>
 											<label class="sr-only" for="form-contact-number">Contact Number</label>
-											<input type="text" name="form-contact-number" placeholder="11 digits..." class="form-contact-number form-control" id="form-contact-number">
+											<input type="contact" name="form-contact-number" placeholder="11 digits..." class="form-contact-number form-control" id="form-contact-number">
 										</div>
+
 										<div class="form-group">
 											<p>Home Address <span class="required">*</span></p>
 				                        	<label class="sr-only" for="form-home-address">Home Address</label>
 				                        	<input type="text" name="form-home-address"  class="form-home-address form-control" id="form-home-address">
 				                        </div>
 
-									    <div class="form-group">
-											<p>Provincial Address</p>
-				                        	<label class="sr-only" for="form-provincial-address">Ue Email</label>
-				                        	<input type="text" name="form-provincial-address"  class="form-provincial-address form-control" id="form-provincial-address">
-				                        </div>
-
 										<div class="form-row">
 											<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-											<label for="agree-term" class="label-agree-term"><span><span></span></span><p>Provincial Address Same as stated above</p></label>
+											<label for="agree-term" class="label-agree-term"><span><span></span></span><p>Provincial Address Same as Home Address</p></label>
 										</div>
 
 				                        <button type="button" class="btn btn-previous">Previous</button>

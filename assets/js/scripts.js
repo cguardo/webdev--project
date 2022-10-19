@@ -1,6 +1,7 @@
 
 jQuery(document).ready(function() {
 	
+	
     /*
         Fullscreen background
     */
@@ -27,11 +28,13 @@ jQuery(document).ready(function() {
     	var parent_fieldset = $(this).parents('fieldset');
     	var next_step = true;
 
+
 	
     	
-    	parent_fieldset.find('input[type="text"], input[type="password"], select').each(function(key, value) {
+    	parent_fieldset.find('input[type="text"], input[type="password"]').each(function() {
     		if( $(this).val() == "" ) {
     			$(this).addClass('input-error');
+				alert("Please input on required slots")
     			next_step = false;
 				
     		}
@@ -39,6 +42,141 @@ jQuery(document).ready(function() {
     			$(this).removeClass('input-error');
     		}
     	});
+
+		parent_fieldset.find('select').each(function() {
+    		if( $(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please choose any of the given")
+    			next_step = false;
+				
+    		}
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+
+		parent_fieldset.find('input[type="studnum"]').each(function() {
+    		if($(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please input on required slots")
+    			next_step = false;	
+    		}
+			else if ($(this).val()) {
+				var filter = /^(20)\d{9}$/;
+				var studNum = $(this).val();
+				if (filter.test(studNum)){
+					if(studNum.length==11){
+						next_step = true;
+					}
+					else{
+						$(this).addClass('input-error');
+						alert('Not a valid number');
+						next_step = false;
+					}
+					
+				}
+				else{
+					$(this).addClass('input-error');
+					alert('Invalid input');
+					next_step = false;
+				}
+			}
+
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+
+
+
+		parent_fieldset.find('input[type="ueemail"]').each(function() {
+    		if($(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please input on required slots")
+    			next_step = false;	
+    		}
+			else if ($(this).val()) {
+				var ueemailregex = /^([a-zA-Z0-9_.+-])+\@(ue.edu.ph)$/;
+				var ueemail = $(this).val();
+				if (ueemailregex.test(ueemail)){
+					next_step = true;	
+				}
+				else{
+					$(this).addClass('input-error');
+					alert('Invalid email');
+					next_step = false;
+				}
+			}
+
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+
+
+
+		parent_fieldset.find('input[type="email"]').each(function() {
+    		if($(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please input on required slots")
+    			next_step = false;	
+    		}
+			else if ($(this).val()) {
+				var emailregex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				var email = $(this).val();
+				if (emailregex.test(email)){
+					next_step = true;	
+				}
+				else{
+					$(this).addClass('input-error');
+					alert('Invalid email');
+					next_step = false;
+				}
+			}
+
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+
+
+
+		parent_fieldset.find('input[type="contact"]').each(function() {
+    		if($(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please input on required slots")
+    			next_step = false;	
+    		}
+			else if ($(this).val()) {
+				var phoneregex = /^(09)\d{9}$/;
+				var mobNum = $(this).val();
+				if (phoneregex.test(mobNum)){
+					if(mobNum.length==11){
+						next_step = true;
+					}
+					else{
+						$(this).addClass('input-error');
+						alert('Not a valid phone number');
+						next_step = false;
+					}
+					
+				}
+				else{
+					$(this).addClass('input-error');
+					alert('Invalid input');
+					next_step = false;
+				}
+			}
+
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+
+
+
+
+
 
     	
     	if( next_step ) {
