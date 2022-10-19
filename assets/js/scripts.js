@@ -40,20 +40,16 @@ jQuery(document).ready(function() {
     		}
     		else {
     			$(this).removeClass('input-error');
+				next_step = false;	
     		}
     	});
 
-		parent_fieldset.find('select').each(function() {
-    		if( $(this).val() == "" ) {
-    			$(this).addClass('input-error');
-				alert("Please choose any of the given")
-    			next_step = false;
-				
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	});
+		if( next_step ) {
+    		parent_fieldset.fadeOut(400, function() {
+	    		$(this).next().fadeIn();
+	    	});
+    	}
+
 
 		parent_fieldset.find('input[type="studnum"]').each(function() {
     		if($(this).val() == "" ) {
@@ -62,7 +58,7 @@ jQuery(document).ready(function() {
     			next_step = false;	
     		}
 			else if ($(this).val()) {
-				var filter = /^(20)\d{9}$/;
+				var filter = /^(20)\d{9}/;
 				var studNum = $(this).val();
 				if (filter.test(studNum)){
 					if(studNum.length==11){
@@ -86,6 +82,31 @@ jQuery(document).ready(function() {
     			$(this).removeClass('input-error');
     		}
     	});
+
+		if( next_step ) {
+    		parent_fieldset.fadeOut(400, function() {
+	    		$(this).next().fadeIn();
+	    	});
+    	}
+
+		parent_fieldset.find('select').each(function() {
+    		if( $(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please choose any of the given")
+    			next_step = false;
+				
+    		}
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+		if( next_step ) {
+    		parent_fieldset.fadeOut(400, function() {
+	    		$(this).next().fadeIn();
+	    	});
+    	}
+
+	
 
 
 
@@ -112,6 +133,11 @@ jQuery(document).ready(function() {
     			$(this).removeClass('input-error');
     		}
     	});
+		if( next_step ) {
+    		parent_fieldset.fadeOut(400, function() {
+	    		$(this).next().fadeIn();
+	    	});
+    	}
 
 
 
@@ -138,6 +164,11 @@ jQuery(document).ready(function() {
     			$(this).removeClass('input-error');
     		}
     	});
+		if( next_step ) {
+    		parent_fieldset.fadeOut(400, function() {
+	    		$(this).next().fadeIn();
+	    	});
+    	}
 
 
 
