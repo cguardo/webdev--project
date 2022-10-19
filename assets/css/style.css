@@ -3,12 +3,13 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: #888;
+    color: black;
     line-height: 30px;
     text-align: center;
 }
 
-strong { font-weight: 500; }
+strong { font-weight: 700; }
+b { font-weight: 400;}
 
 a, a:hover, a:focus {
 	color: #19b9e7;
@@ -23,14 +24,14 @@ h1, h2 {
 	margin-top: 10px;
 	font-size: 38px;
     font-weight: 100;
-    color: #555;
+    color: black;
     line-height: 50px;
 }
 
 h3 {
 	font-size: 22px;
     font-weight: 300;
-    color: #555;
+    color: black;
     line-height: 30px;
 }
 
@@ -105,7 +106,7 @@ ul.navbar-nav {
 
 .navbar-brand {
 	width: 123px;
-	background: url(../img/logo.png) left center no-repeat;
+	background: url(../img/backgrounds/ue_name1.png) left center no-repeat;
 	text-indent: -99999px;
 }
 
@@ -117,10 +118,10 @@ ul.navbar-nav {
 }
 
 .top-content .text {
-	color: #fff;
+	color: black;
 }
 
-.top-content .text h1 { color: #fff; }
+.top-content .text h1 { color: #3B3131; }
 
 .top-content .description {
 	margin: 20px 0 10px 0;
@@ -145,9 +146,10 @@ ul.navbar-nav {
 .form-top {
 	overflow: hidden;
 	padding: 0 25px 15px 25px;
-	background: #fff;
+	background: #990000;
 	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
 	text-align: left;
+	opacity: 0.8;
 }
 
 .form-top-left {
@@ -166,13 +168,16 @@ ul.navbar-nav {
 	color: #ddd;
 	line-height: 100px;
 	text-align: right;
+	
 }
 
 .form-bottom {
 	padding: 25px 25px 30px 25px;
-	background: #eee;
+	background: #F2F2F2;
 	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
 	text-align: left;
+	opacity: 0.9;
+	
 }
 
 form .form-bottom textarea {
@@ -234,7 +239,7 @@ only screen and (                min-resolution: 2dppx) {
 	
 	/* logo */
     .navbar-brand {
-    	background-image: url(../img/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
+    	background-image: url(../img/backgrounds/ue_name2.png) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
     }
 	
 }
