@@ -163,6 +163,12 @@
 				                        	<input type="text" name="form-home-address"  class="form-home-address form-control" id="form-home-address">
 				                        </div>
 
+										<div class="form-group">
+											<p>Provincial Address <span class="required">*</span></p>
+				                        	<label class="sr-only" for="form-home-address">Provincial Address</label>
+				                        	<input type="text" name="form-provincial-address"  class="form-provincial-address form-control" id="form-provincial-address">
+				                        </div>
+
 										<div class="form-row">
 											<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
 											<label for="agree-term" class="label-agree-term"><span><span></span></span><p>Provincial Address Same as Home Address</p></label>
@@ -197,6 +203,7 @@
 				                        	<input type="password" name="form-repeat-password" placeholder="Repeat password..." 
 				                        				class="form-repeat-password form-control" id="form-repeat-password">
 				                        </div>-->
+										
 										<div class="form-group">
 											<p>Full name <span class="required">*</span></p>
 				                        	<label class="sr-only" for="form-home-address">Full Name</label>
@@ -213,6 +220,18 @@
 											<label class="sr-only" for="form-contact-numberEmergency">Contact Number</label>
 											<input type="text" name="form-contact-numberEmergency" placeholder="11 digits..." class="form-contact-numberEmergency form-control" id="form-contact-numberEmergency">
 										</div>
+
+										<div class="form-group">
+											<p>Home Address <span class="required">*</span></p>
+				                        	<label class="sr-only" for="form-home-address">Home Address</label>
+				                        	<input type="text" name="form-home-address"  class="form-home-address form-control" id="form-home-address">
+				                        </div>
+
+										<div class="form-row">
+											<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+											<label for="agree-term" class="label-agree-term"><span><span></span></span><p>Provincial Address Same as Home Address</p></label>
+										</div>
+
 
 										<h3>Social Media</h3>
 
@@ -249,7 +268,7 @@
 		                        		</div>
 		                            </div>
 		                            <div class="form-bottom">
-				                        <div class="form-group">
+				                        <!--<div class="form-group">
 				                        	<label class="sr-only" for="form-email">Email</label>
 				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
 				                        </div>
@@ -261,7 +280,26 @@
 				                        	<label class="sr-only" for="form-repeat-password">Repeat password</label>
 				                        	<input type="password" name="form-repeat-password" placeholder="Repeat password..." 
 				                        				class="form-repeat-password form-control" id="form-repeat-password">
-				                        </div>
+				                        </div>-->
+
+										<div class="form-group">
+											<p>Membership Type <span class="required">*</span></p>
+											<select name="membership_type" id="membership_type" >
+												<option value="">---</option>
+												<option value="New">New</option>
+												<option value="Renew">Renew</option>
+												<option value="Honorary">Honorary</option>
+											</select>										
+										 </div>
+
+										 <div class="form-group">
+											<p for="photo">Proof of payment:
+												<input
+												type="file"
+												id="photo"
+												name="photo"
+												accept="image/*"></p>
+										</div>
 				                        <button type="button" class="btn btn-previous">Previous</button>
 				                        <button type="button" class="btn btn-next">Next</button>
 				                    </div>
@@ -278,7 +316,7 @@
 		                        		</div>
 		                            </div>
 		                            <div class="form-bottom">
-				                    	<div class="form-group">
+				                    	<!--<div class="form-group">
 				                    		<label class="sr-only" for="form-facebook">Facebook</label>
 				                        	<input type="text" name="form-facebook" placeholder="Facebook..." class="form-facebook form-control" id="form-facebook">
 				                        </div>
@@ -289,9 +327,23 @@
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-google-plus">Google plus</label>
 				                        	<input type="text" name="form-google-plus" placeholder="Google plus..." class="form-google-plus form-control" id="form-google-plus">
-				                        </div>
+				                        </div>-->
+
+										<div class="form-group">
+											<h3 class="heading">Terms and Conditions</h3>
+											<p>By accessing or using the Service you agree to be bound by these Terms. If you disagree
+												with any part of the terms then you may not access the Service.</p>
+											<br>
+											<p>PLEASE NOTE: We reserve the right, at our sole discretion, to change, modify or otherwise alter these Terms and Conditions at any time. Unless otherwise indicated, amendments will become effective immediately. Please review these Terms and Conditions periodically. Your continued use of the Site following the posting of changes and/or modifications will constitute your acceptance of the revised Terms and Conditions and the reasonableness of these standards for notice of changes. For your information, this page was last updated as of the date at the top of these terms and conditions.</p>
+										</div>
+										
+										<div class="form-row">
+											<input type="checkbox" name="agree-termcondition" id="agree-termcondition" class="agree-termcondition" />
+											<label for="agree-termcondition" class="label-agree-termcondition"><span><span></span></span><p>Agree in terms and conditions</p></label>
+										</div>
+
 				                        <button type="button" class="btn btn-previous">Previous</button>
-				                        <button type="submit" class="btn">Sign me up!</button>
+				                        <button type="submit" class="btn">Submit</button>
 				                    </div>
 			                    </fieldset>
 		                    
