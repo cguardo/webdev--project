@@ -15,6 +15,16 @@
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/style.css">
+		<script>
+			function fillAddress(){
+				if(document.getElementById('sameaddress').checked){
+					let text = document.getElementById('form_home_address'.value);
+					document.getElementById('form_provincial_address').value = text;
+				}else {
+					document.getElementById('form_provincial_address').value = "";
+			  	}
+		}
+		</script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,7 +114,7 @@
 
 										<div class="form-group">
 											<p><b>Year Level </b><span class="required">*</span></p>
-											<select name="yearLevel" id="yearLevel" >
+											<select name="yearLevel" id="form-year-level" >
 												<option value="">---</option>
 												<option value="1st">1st Year</option>
 												<option value="2nd">2nd Year</option>
@@ -115,7 +125,7 @@
 
 										 <div class="form-group">
 											<p><b>Program </b><span class="required">*</span></p>
-											<select name="program" id="program" >
+											<select name="program" id="form-program" >
 												<option value="">---</option>
 												<option value="CpE">Computer Engineering</option>
 												<option value="EE">Electrical Engineering</option>
@@ -133,7 +143,7 @@
 			                    <fieldset>
 		                        	<div class="form-top">
 		                        		<div class="form-top-left">
-		                        			<h3><strong>Step 2 / 5</strong>></h3>
+		                        			<h3><strong>Step 2 / 5</strong></h3>
 		                            		<p><strong>Contact Information</strong>></p>
 		                        		</div>
 		                        		<div class="form-top-right">
@@ -142,14 +152,14 @@
 		                            </div>
 		                            <div class="form-bottom">
 				                        <div class="form-group">
-											<p><b>Ue Email </b><span class="required">*</span></p>
+											<p><b>Ue Email Address </b><span class="required">*</span></p>
 				                        	<label class="sr-only" for="form-ueemail">Ue Email</label>
-				                        	<input type="ueemail" name="form-ueemail" placeholder="example@ue.edu.ph" class="form-email form-control" id="form-ueemail">
+				                        	<input type="ueemail" name="form-ueemail" placeholder="example@ue.edu.ph" class="form-email form-control" id="form-ue-email">
 				                        </div>
 										<div class="form-group">
-											<p><b>Personal Email </b><span class="required">*</span></p>
+											<p><b>Personal Email Address</b><span class="required">*</span></p>
 				                        	<label class="sr-only" for="form_Personalemail">Personal Email</label>
-				                        	<input type="email" name="form_Personalemail" placeholder="example@gmail.com" class="form_Personalemail form-control" id="form_Personalemail">
+				                        	<input type="email" name="form_Personalemail" placeholder="example@gmail.com" class="form_Personalemail form-control" id="form-personal-email">
 				                        </div>
 									
 										<div class="form-group">
@@ -161,17 +171,17 @@
 										<div class="form-group">
 											<p><b>Home Address </b> <span class="required">*</span></p>
 				                        	<label class="sr-only" for="form-home-address">Home Address</label>
-				                        	<input type="text" name="form-home-address"  class="form-home-address form-control" id="form-home-address">
+				                        	<input type="text" name="form-home-address"  class="form-home-address form-control" id="form_home_address">
 				                        </div>
 
 										<div class="form-group">
 											<p><b>Provincial Address </b><span class="required">*</span></p>
 				                        	<label class="sr-only" for="form-home-address">Provincial Address</label>
-				                        	<input type="text" name="form-provincial-address"  class="form-provincial-address form-control" id="form-provincial-address">
+				                        	<input type="text" name="form-provincial-address"  class="form-provincial-address form-control" id="form_provincial_address">
 				                        </div>
 
 										<div class="form-row">
-											<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+											<input type="checkbox" name="agree-term" id="sameaddress" class="agree-term" onclick="fillAddress();" />
 											<label for="agree-term" class="label-agree-term"><span><span></span></span><p>Provincial Address Same as Home Address</p></label>
 										</div>
 
@@ -191,19 +201,6 @@
 		                        		</div>
 		                            </div>
 		                            <div class="form-bottom">
-				                        <!--<div class="form-group">
-				                        	<label class="sr-only" for="form-email">Email</label>
-				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-				                        </div>
-				                        <div class="form-group">
-				                    		<label class="sr-only" for="form-password">Password</label>
-				                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-repeat-password">Repeat password</label>
-				                        	<input type="password" name="form-repeat-password" placeholder="Repeat password..." 
-				                        				class="form-repeat-password form-control" id="form-repeat-password">
-				                        </div>-->
 										
 										<div class="form-group">
 											<p><b>Full name </b><span class="required">*</span></p>
@@ -225,7 +222,7 @@
 										<div class="form-group">
 											<p>Home Address <span class="required">*</span></p>
 				                        	<label class="sr-only" for="form-home-address">Home Address</label>
-				                        	<input type="text" name="form-home-address"  class="form-home-address form-control" id="form-home-address">
+				                        	<input type="text" name="form-home-addressEmergency"  class="form-home-address form-control" id="form-home-addressEmergency">
 				                        </div>
 
 										<div class="form-row">
