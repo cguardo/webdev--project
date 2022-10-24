@@ -39,6 +39,46 @@ jQuery(document).ready(function() {
     			$(this).removeClass('input-error');
     		}
     	});
+		
+
+
+        //contact number validation 
+		parent_fieldset.find('input[type="contact"]').each(function() {
+    		if($(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please input on required slots")
+    			next_step = false;	
+    		}
+			else if ($(this).val()) {
+				var check = /^(09)\d{9}/;
+				var contact = $(this).val();
+				if (check.test(contact)){
+					if(contact.length==11){
+						next_step = true;
+					}
+					else{
+						$(this).addClass('input-error');
+						alert('Not a valid number');
+						next_step = false;
+					}
+					
+				}
+				else{
+					$(this).addClass('input-error');
+					alert('Invalid input');
+					next_step = false;
+				}
+			}
+
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+
+    	});
+
+
+
+	
 
 		parent_fieldset.find('input[type="text"]').each(function() {
     		if( $(this).val() == "" ) {
@@ -317,6 +357,8 @@ jQuery(document).ready(function() {
 
     	
     });
+
+    
 
 
 
