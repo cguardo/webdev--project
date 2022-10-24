@@ -105,8 +105,8 @@ ul.navbar-nav {
 .navbar-inverse ul.navbar-nav li .li-social a:focus { border: 0; color: #19b9e7; }
 
 .navbar-brand {
-	width: 170px;
-	background: url(../img/backgrounds/ue_name1.png) left center no-repeat;
+	width: 200px;
+	background: url(../img/backgrounds/ue-Name2.png) left center no-repeat;
 	text-indent: -99999px;
 }
 
@@ -239,7 +239,7 @@ only screen and (                min-resolution: 2dppx) {
 	
 	/* logo */
     .navbar-brand {
-    	background-image: url(../img/backgrounds/ue_name2.png) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
+    	background-image: url(../img/backgrounds/ue-Name2.png) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
     }
 	
 }
