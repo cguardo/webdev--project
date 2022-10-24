@@ -247,7 +247,7 @@ jQuery(document).ready(function() {
 			}
 	   });
 
-	   	parent_fieldset.find('input[id="form_home_address"]').each(function() {
+	   	parent_fieldset.find('input[id="primary_address"]').each(function() {
     		if( $(this).val() == "" ) {
     			$(this).addClass('input-error');
 				alert("Home Address cannot be blank.")
@@ -256,7 +256,7 @@ jQuery(document).ready(function() {
     		}
 		});
 
-		parent_fieldset.find('input[id="form_provincial_address"]').each(function() {
+		parent_fieldset.find('input[id="form-provincial-address"]').each(function() {
     		if( $(this).val() == "" ) {
     			$(this).addClass('input-error');
 				alert("Provincial Address cannot be blank.")
@@ -328,7 +328,7 @@ jQuery(document).ready(function() {
 
 		parent_fieldset.find('input[id="form-facebook-username"]').each(function() {
 			if ($(this).val()) {
-				var fbusernameex = /^@([a-zA-Z0-9_.+-])$/;
+				var fbusernameex = /^\@([a-zA-Z0-9_.+-])+$/;
 				var fbusername = $(this).val();
 				if (fbusernameex.test(fbusername)){
 					next_step = true;
@@ -345,7 +345,75 @@ jQuery(document).ready(function() {
     		}
     	});
 
+		parent_fieldset.find('input[id="form-twitter-username"]').each(function() {
+			if ($(this).val()) {
+				var fbusernameex = /^\@([a-zA-Z0-9_.+-])+$/;
+				var fbusername = $(this).val();
+				if (fbusernameex.test(fbusername)){
+					next_step = true;
+				}
+				else{
+					$(this).addClass('input-error');
+					alert('The inputted Twitter Username is invalid. Please enter a valid username.');
+					next_step = false;
+				}
+			}
 
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+
+
+		parent_fieldset.find('input[id="form-instagram-username"]').each(function() {
+			if ($(this).val()) {
+				var fbusernameex = /^\@([a-zA-Z0-9_.+-])+$/;
+				var fbusername = $(this).val();
+				if (fbusernameex.test(fbusername)){
+					next_step = true;
+				}
+				else{
+					$(this).addClass('input-error');
+					alert('The inputted Instagram Username is invalid. Please enter a valid username.');
+					next_step = false;
+				}
+			}
+
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+
+		/* step 4/5 */
+
+		parent_fieldset.find('select[id="membership_type"]').each(function() {
+    		if( $(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please choose a Membership Type.")
+    			next_step = false;
+				
+    		}
+		});
+
+		parent_fieldset.find('input[id="photo"]').each(function() {
+    		if( $(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please attach a file.")
+    			next_step = false;
+				
+    		}
+		});
+
+		/* step 5/5 */
+
+		parent_fieldset.find('input[id="agree-termcondition"]').each(function() {
+    		if( $(this).val() == "" ) {
+    			$(this).addClass('input-error');
+				alert("Please indicate that you have read and agree to the Terms and Conditions.")
+    			next_step = false;
+				
+    		}
+		});
 		
 
 
@@ -358,19 +426,7 @@ jQuery(document).ready(function() {
     	
     });
 
-    
 
-
-
-
-    	
-    // 	if( next_step ) {
-    // 		parent_fieldset.fadeOut(400, function() {
-	//     		$(this).next().fadeIn();
-	//     	});
-    // 	}
-    	
-    // });
     
     // previous step
     $('.registration-form .btn-previous').on('click', function() {

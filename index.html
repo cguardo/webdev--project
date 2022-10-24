@@ -16,13 +16,14 @@
 		<link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/style.css">
 		<script>
-			function fillAddress(){
-				var decider = document.getElementById('same-address');
-				if(decider.checked != false){
-					alert('Checked'+ decider);
-				}else {
-					alert('Checked');
-			  	}
+			function agreeTerms(){
+				var decider = document.getElementById('agree-termcondition');
+				if(submit = true && decider.checked == true){
+					alert('You have successfully registered your details. Thank you!')
+					
+				}else{
+					alert('Please indicate that you have read and agree to the Terms and Conditions.');
+				}
 		}
 		</script>
 
@@ -183,7 +184,7 @@
 				                        	<input type="text" name="form-provincial-address"  class="form-provincial-address form-control" id="form-provincial-address">
 				                        </div>
 										<div class="form-row">
-											<input type="checkbox" name="same" id="same-address" class="agree-term" />
+											<input type="checkbox" name="same" id="same-address" class="agree-term" onclick="fillAddress();" />
 											<label for="agree-term" class="label-agree-term"><span><span></span></span><p>Provincial Address Same as Home Address</p></label>
 										</div>
 
@@ -239,19 +240,19 @@
 										<div class="form-group">
 											<p>Facebook Username </p>
 				                        	<label class="sr-only" for="form-facebook-username">Facebook Username </label>
-				                        	<input type="text" name="form-facebook-username"  class="form-facebook-username form-control" id="form-facebook-username">
+				                        	<input type="text" name="form-facebook-username" placeholder="@username" class="form-facebook-username form-control" id="form-facebook-username">
 				                        </div>
 
 										<div class="form-group">
 											<p>Twitter Username </p>
 				                        	<label class="sr-only" for="form-twitter-username">Twitter Username</label>
-				                        	<input type="text" name="form-twitter-username"  class="form-twitter-username form-control" id="form-twitter-username">
+				                        	<input type="text" name="form-twitter-username" placeholder="@username" class="form-twitter-username form-control" id="form-twitter-username">
 				                        </div>
 
 										<div class="form-group">
 											<p>Instagram Username </p>
 				                        	<label class="sr-only" for="form-instagram-username">Instagram Username </label>
-				                        	<input type="text" name="form-instagram-username"  class="form-instagram-username form-control" id="form-instagram-username">
+				                        	<input type="text" name="form-instagram-username" placeholder="@username" class="form-instagram-username form-control" id="form-instagram-username">
 				                        </div>
 									
 
@@ -296,7 +297,7 @@
 										 </div>
 
 										 <div class="form-group">
-											<p for="photo">Proof of payment:
+											<p for="photo">Proof of payment:<span class="required">*</span>
 												<input
 												type="file"
 												id="photo"
@@ -345,8 +346,8 @@
 											<label for="agree-termcondition" class="label-agree-termcondition"><span><span></span></span><p>Agree in terms and conditions</p></label>
 										</div>
 
-				                        <button type="button" class="btn btn-previous"><strong>Previous</strong>></button>
-				                        <button type="submit" class="btn"><strong>Submit</strong></button>
+				                        <button type="button" class="btn btn-previous"><strong>Previous</strong></button>
+				                        <button type="submit" class="btn" id="submit" onclick="agreeTerms();"><strong>Submit</strong></button>
 				                    </div>
 			                    </fieldset>
 		                    
