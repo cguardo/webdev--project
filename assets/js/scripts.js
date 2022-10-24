@@ -288,7 +288,7 @@ jQuery(document).ready(function() {
 
 		parent_fieldset.find('input[id="form-facebook-username"]').each(function() {
 			if ($(this).val()) {
-				var fbusernameex = /^([a-zA-Z0-9_.+-])$/;
+				var fbusernameex = /^@([a-zA-Z0-9_.+-])$/;
 				var fbusername = $(this).val();
 				if (fbusernameex.test(fbusername)){
 					next_step = true;
